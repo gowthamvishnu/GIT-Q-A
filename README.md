@@ -44,14 +44,18 @@
  
 8)what is git pull?
   * it is used to get the latest changes from the remote repository.
+  cmd: git pull remote_repo_url
 
 9)what is git fetch?
   * it will do the fetch (or). it will track (or) it will download the remote changes but it doesn't reflect on the local repository.
+  cmd: git fetch remote_repo_url
 
 10)what is  git merge?
   * if we want to reflect the remote changes in the local repository we will use the git merge followed by the git fetch.
   * we can say that git merge = git pull + git fetch.
-
+    git merge source_branch_name
+ Note:whenever you are merging you have to remember that you were always checkout in the destination branch.
+ 
 11)git cherry-pick?
   * it is the act of picking a commit from a branch and apply it to another branch.
   * you can switch to the correct branch and cherry-pick the commit to where it should belong.
@@ -79,31 +83,36 @@ a)it is a intermediate layer resides between workspace and the local repository.
 
 18)what is meant by git branch?
 a) copy of the current branch.
+  cmd: git branch (branc_name)  --> To create a branch
 
 19)what is meant by git commit?
-a)to add the changes from staging area to remote directory we need to commit the changes with a commit message
+a)to add the changes from staging area to remote directory we need to commit the changes with a commit message.
+  cmd: git commit -m"commit msg"
 
 20)what is meant by git log?
 a)it will tell you total commits information like how many commites done,commitid,commited by whom,commit information etc..
+ cmd: git log
 
 21)what is meant by git add?
 a)adding the files/code/changes to the staging area from local workspace/working area.
+ cmd: git add filename -->To add a particular file
+      git add ./*      --> to add all the files in that repo
 
 22)what is meant by git status?
 a) It will tell us that which files are added to the staging area from local repository and which are not.
    when ever we use this command,if the files are showing in red colour that means those files are not added to staging area.
    if the files are showing in green colour that means those files are added to staging area.
+   cmd: git status
    
 23)what is meant by git push?
 a)To push the local changes to the remote repo we use git push.
+  git push origin branchname
 
 24)what is meant by git clone?
 a)To clone the remote repo to local workspace.
+  cmd: git clone remote_repo_url
 
-25)what is meant by git add?
-a)adding the files/code/changes to the staging area from local workspace/working area
-
-26)explain git configuration?
+25)explain git configuration?
 a)i It is a git configuration file of git to introduce yourself to git.
 git config --global user.name "examplename"
 git config --global user.mail "example@mail"
