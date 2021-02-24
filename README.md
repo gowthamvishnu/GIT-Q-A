@@ -71,11 +71,15 @@
 13)what is meant by git reset?
 
 14)what is meant by git revert ?
+a)The "revert" command helps you undo an existing commit.
+  It's important to understand that it does not delete any data in this process: instead, Git will create new changes with the opposite effect - and thereby undo the specified     old commit.
+  cmd: git revert commitid
 
 15)what is meant by git rebase?
 a)this is also a way of combining the workflow between two branches.it can be used to make a linear sequence of commits.
 
 16)what is meant by git stashing?
+a)storing file in a temperory area.
 
 17)git index/git staging area?
 a)it is a intermediate layer resides between workspace and the local repository.
