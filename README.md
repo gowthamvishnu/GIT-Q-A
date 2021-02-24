@@ -57,10 +57,19 @@
  Note:whenever you are merging you have to remember that you were always checkout in the destination branch.
  
 11)git cherry-pick?
-  * it is the act of picking a commit from a branch and apply it to another branch.
+  * it is the act of picking a particular commit from a branch and apply it to another branch.
   * you can switch to the correct branch and cherry-pick the commit to where it should belong.
+   cmd: git cherry-pick commitid(which you want to merge)
+   Note:If we use git merge it will merge all the commits/changes.if you want to merge a partcular commit from one branch to another branch we use cherry-pick
 
-12) what is the process to revert a commit that has already been pushed and made public?
+
+12)what is meant by git revert ?
+a)The "revert" command helps you undo an existing commit.
+  It's important to understand that it does not delete any data in this process: instead, Git will create new changes with the opposite effect - and thereby undo the specified     old commit.
+  cmd: git revert commitid
+
+
+13) what is the process to revert a commit that has already been pushed and made public?
   * there are 2 processes through which you can revert a commit.
   a)remove or fix the bad file in a new commit and push it to the remote repository.then commit it to the remote repository using:
     git commit -m "commit msg"
@@ -68,15 +77,10 @@
     git revert <commit id>
     ex: git revert 568deo35f
 
-13)what is meant by git reset?
-
-14)what is meant by git revert ?
-a)The "revert" command helps you undo an existing commit.
-  It's important to understand that it does not delete any data in this process: instead, Git will create new changes with the opposite effect - and thereby undo the specified     old commit.
-  cmd: git revert commitid
-
-15)what is meant by git rebase?
+14)what is meant by git rebase?
 a)this is also a way of combining the workflow between two branches.it can be used to make a linear sequence of commits.
+
+15)what is meant by git reset?
 
 16)what is meant by git stashing?
 a)storing file in a temperory area.
@@ -113,7 +117,7 @@ a)To push the local changes to the remote repo we use git push.
   git push origin branchname
 
 24)what is meant by git clone?
-a)To clone the remote repo to local workspace.
+a)dowmload the remote repo to local workspace.
   cmd: git clone remote_repo_url
 
 25)explain git configuration?
@@ -125,6 +129,11 @@ change it inside the project
 change the directory to particular directory.folling commands
 git config user.name "examplename"(without global)
 git config user.mail "example@mail"(without global)
+
+some more git commans/terminologies:
+26)git checkout :To know in which branch you are working
+27)git checkout branch name: To swith to a particular branch
+28)git checkout -b branchname: It will create branch and switch to the branch
  
 
 
